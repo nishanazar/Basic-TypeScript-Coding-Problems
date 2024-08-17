@@ -65,9 +65,9 @@ function sumOfOddNumbers(num) {
     return oddSum;
 }
 let numbers = [1, 2, 3, 4, 5];
-console.log(sumOfOddNumbers(numbers)); // Output: 9
+// console.log(sumOfOddNumbers(numbers)); // Output: 9
 //-------------------Question: 06----------------------------------
-// Task: You are given an array of numbers that consists of some positive integers. You need to 
+// Task: You are given an array of numbers that consists of some positive integers. You need to
 // write a function that filters out only the even numbers from this array and returns a new array
 //  containing those even numbers.
 //  Example: numbers = [1, 2, 3, 4, 5, 6];
@@ -84,4 +84,40 @@ function filterEvenNumbers(num1) {
     return newArray;
 }
 let number = [1, 2, 3, 4, 5, 6];
-console.log(filterEvenNumbers(number));
+// console.log(filterEvenNumbers(number));  // Outout: [ 2, 4, 6 ]
+//-------------------Question: 07----------------------------------
+// Write a function that takes a parameter which can either be a string or a number and returns
+//  its length (for string) or the number itself (for number).
+function eitherStringOrNumber(para) {
+    if (typeof para === "string") {
+        return para.length;
+    }
+    else {
+        return para;
+    }
+}
+// console.log(eitherStringOrNumber("hello"));
+//-------------------Question: 08-------------------------------
+//Write a function that takes three numbers as input and returns the smallest one.
+function findSlallest(a, b, c) {
+    let largest = a;
+    if (b > largest) {
+        largest = b;
+    }
+    if (c > largest) {
+        largest = c;
+    }
+    return largest;
+}
+console.log(findSlallest(10, 30, 50));
+function findSmallest(a, b, c) {
+    let smallest = a;
+    if (b < smallest) {
+        smallest = b;
+    }
+    if (c < smallest) {
+        smallest = c;
+    }
+    return smallest;
+}
+console.log(findSmallest(3, 5, 2)); // Output: 2

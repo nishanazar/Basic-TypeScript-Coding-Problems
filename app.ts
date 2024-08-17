@@ -65,30 +65,26 @@ function numberIfEvenOrOdd(num: number): boolean {
 //  Tumhain aik function likhna hai jo iss array mein se sirf odd numbers ko filter kare aur unn ka
 //   sum return kare.
 
-
 // let numbers = [1, 2, 3, 4, 5];
 // console.log(sumOfOddNumbers(numbers)); // Output: 9
 // Hint: Array ka loop use karo aur har number ko check karo ke wo odd hai ya nahi, aur agar hai toh
 //  usay sum mein add karo.
 
-function sumOfOddNumbers(num: number[]): number{
+function sumOfOddNumbers(num: number[]): number {
   let oddSum: number = 0;
   for (let i = 0; i < num.length; i++) {
-     if (num[i] % 2 !== 0){
-
-      oddSum += num[i]
-     }
-   
+    if (num[i] % 2 !== 0) {
+      oddSum += num[i];
+    }
   }
   return oddSum;
 }
 
 let numbers = [1, 2, 3, 4, 5];
-console.log(sumOfOddNumbers(numbers)); // Output: 9
-
+// console.log(sumOfOddNumbers(numbers)); // Output: 9
 
 //-------------------Question: 06----------------------------------
-// Task: You are given an array of numbers that consists of some positive integers. You need to 
+// Task: You are given an array of numbers that consists of some positive integers. You need to
 // write a function that filters out only the even numbers from this array and returns a new array
 //  containing those even numbers.
 //  Example: numbers = [1, 2, 3, 4, 5, 6];
@@ -96,16 +92,46 @@ console.log(sumOfOddNumbers(numbers)); // Output: 9
 // Hint: Use a loop to iterate through the array, check each element to see if it's even
 //  (using the modulus operator), and if it is, add it to the new array.
 
-function filterEvenNumbers(num1: number[]):number[] {
-  let newArray:number[] = []
+function filterEvenNumbers(num1: number[]): number[] {
+  let newArray: number[] = [];
   for (let i = 0; i < num1.length; i++) {
-   if (num1[i] % 2 === 0){
-       newArray.push(num1[i])
-   }
-    
+    if (num1[i] % 2 === 0) {
+      newArray.push(num1[i]);
+    }
   }
-  return newArray
-  
+  return newArray;
 }
 let number = [1, 2, 3, 4, 5, 6];
-console.log(filterEvenNumbers(number));  // Outout: [ 2, 4, 6 ]
+// console.log(filterEvenNumbers(number));  // Outout: [ 2, 4, 6 ]
+
+//-------------------Question: 07----------------------------------
+// Write a function that takes a parameter which can either be a string or a number and returns
+//  its length (for string) or the number itself (for number).
+
+function eitherStringOrNumber(para: string | number) {
+  if (typeof para === "string") {
+    return para.length;
+  } else {
+    return para;
+  }
+}
+
+// console.log(eitherStringOrNumber("hello"));
+
+//-------------------Question: 08-------------------------------
+
+//Write a function that takes three numbers as input and returns the smallest one.
+
+function findSmallest(a: number, b: number, c: number): number {
+  let smallest = a;
+
+  if (b < smallest) {
+    smallest = b;
+  }
+  if (c < smallest) {
+    smallest = c;
+  }
+  return smallest;
+}
+
+console.log(findSmallest(3, 5, 2)); // Output: 2
