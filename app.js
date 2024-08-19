@@ -109,7 +109,7 @@ function findSmallest(a, b, c) {
     }
     return smallest;
 }
-console.log(findSmallest(3, 5, 2)); // Output: 2
+// console.log(findSmallest(3, 5, 2)); // Output: 2
 //-----------------Question: 09---------------------------------
 // Write a TypeScript function called findLargest that takes an array of numbers as input and
 //  returns the largest number in the array.
@@ -124,7 +124,7 @@ function findLargest(arr) {
 }
 // console.log(findLargest([4, 80, 9, 37, 10, 55])); // Output: 80
 //-----------------Question: 10--------------------------------
-// Write a TypeScript function called doubleNumber that takes a number as input and returns 
+// Write a TypeScript function called doubleNumber that takes a number as input and returns
 // double its value.
 function doubleNumber(num) {
     return num + num;
@@ -134,12 +134,22 @@ function doubleNumber(num) {
 //-----------------Question: 11--------------------------------
 // Write a TypeScript function called square that takes a number as input and returns its square
 //  (the number multiplied by itself).
-// function square(num: number): number{
-//   return num * num
-// }
-// console.log(square(4));
-// console.log(square(7));
-function square1(num) {
-    return num.repeat(5);
+function square(num) {
+    return num * num;
 }
-console.log(square1("hello"));
+// console.log(square(4)); // 16
+// console.log(square(7)); // 49
+//-----------------Question: 12--------------------------------
+//write a program to take a string as input from the user and print its length.
+function stringLength(str) {
+    return str.length;
+}
+// console.log(stringLength("hello"));
+//-----------------Question: 12--------------------------------
+// write a program to print numbers from 1 to 10 in reverse order
+// for (let i = 10; i <= 1; i--) {
+// console.log(i);
+//write a program to print the elements of an array in reverse order
+let elements = [9, 8, 7, 5, 4, 3, 2]; //["world", "Hello"]
+elements.reverse();
+console.log(elements);

@@ -134,7 +134,7 @@ function findSmallest(a: number, b: number, c: number): number {
   return smallest;
 }
 
-console.log(findSmallest(3, 5, 2)); // Output: 2
+// console.log(findSmallest(3, 5, 2)); // Output: 2
 
 //-----------------Question: 09---------------------------------
 // Write a TypeScript function called findLargest that takes an array of numbers as input and
@@ -170,5 +170,30 @@ function square(num: number): number {
   return num * num;
 }
 
-console.log(square(4)); // 16
-console.log(square(7)); // 49
+// console.log(square(4)); // 16
+// console.log(square(7)); // 49
+
+//-----------------Question: 12--------------------------------
+
+//write a program to take a string as input from the user and print its length.
+
+function stringLength(str: string): number {
+  return str.length;
+}
+
+// console.log(stringLength("hello"));
+
+//-----------------Question: 13--------------------------------
+
+// write a program to print numbers from 1 to 10 in reverse order
+
+for (let i = 10; i >= 1; i--) {
+  console.log(i);
+}
+//-----------------Question: 14--------------------------------
+//write a program to print the elements of an array in reverse order
+
+let elements = ["world", "Hello"];
+//let elements = [9,8,7,5,4,3,2] //[2, 3, 4, 5,7, 8, 9]
+elements.reverse();
+console.log(elements); //['Hello', 'world']
