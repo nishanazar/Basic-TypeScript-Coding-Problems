@@ -145,11 +145,36 @@ function stringLength(str) {
     return str.length;
 }
 // console.log(stringLength("hello"));
-//-----------------Question: 12--------------------------------
+//-----------------Question: 13--------------------------------
 // write a program to print numbers from 1 to 10 in reverse order
-// for (let i = 10; i <= 1; i--) {
-// console.log(i);
+for (let i = 10; i >= 1; i--) {
+    // console.log(i);
+}
+//-----------------Question: 14--------------------------------
 //write a program to print the elements of an array in reverse order
-let elements = [9, 8, 7, 5, 4, 3, 2]; //["world", "Hello"]
+let elements = ["world", "Hello"];
+//let elements = [9,8,7,5,4,3,2] //[2, 3, 4, 5,7, 8, 9]
 elements.reverse();
-console.log(elements);
+// console.log(elements); //['Hello', 'world']
+//-----------------Question: 15-------------------------------
+// write a function in TypeScript that takes an array of numbers as input and returns the largest
+//  number in the array.
+function largestNumber(num) {
+    let largest = num[0];
+    for (let i = 0; i < num.length; i++) {
+        if (num[i] > largest) {
+            largest = num[i];
+        }
+    }
+    return largest;
+}
+console.log(largestNumber([1, 3, 4, 5, 7, 9]));
+console.log(largestNumber([20, 39, 88]));
+//-----------------Question: 16-------------------------------
+// Write a function in TypeScript that takes an array of numbers as input and returns a new array
+//  with the elements in reverse order.
+function reverseArray(num) {
+    return num.reverse();
+}
+let output = reverseArray([9, 8, 7, 6, 5,]);
+console.log(output);
