@@ -168,13 +168,46 @@ function largestNumber(num) {
     }
     return largest;
 }
-console.log(largestNumber([1, 3, 4, 5, 7, 9]));
-console.log(largestNumber([20, 39, 88]));
+// console.log(largestNumber([1, 3, 4, 5, 7, 9]));
+// console.log(largestNumber([20, 39, 88]));
 //-----------------Question: 16-------------------------------
 // Write a function in TypeScript that takes an array of numbers as input and returns a new array
 //  with the elements in reverse order.
 function reverseArray(num) {
     return num.reverse();
 }
-let output = reverseArray([9, 8, 7, 6, 5,]);
-console.log(output);
+let output = reverseArray([9, 8, 7, 6, 5]);
+// console.log(output);
+//-----------------Question: 17-------------------------------
+// Write a function called fetchData that simulates fetching data with a promise. The function
+// should return a promise that resolves with an object containing a data key after 2 seconds.
+// Instructions:
+// The function should return a promise that resolves after 2 seconds.
+// The resolved value should be an object with a data key, and its value should be "Hello, world!".
+function fetchData() {
+    let promise = new Promise((resolve, rejct) => {
+        setTimeout(() => {
+            resolve({
+                data: "Hello, world!",
+            });
+        }, 2000);
+    });
+    return promise;
+}
+fetchData().then((vale) => console.log(vale));
+//-----------------Question: 18-------------------------------
+// Write a function called delayedMessage that takes a message (string) and a delay time (number)
+// in milliseconds as parameters. The function should return a promise that resolves after the
+//  specified delay with the provided message.
+//  Instructions:
+// The function should take two parameters: message (string) and delay (number).
+// It should return a promise that resolves with the provided message after the specified delay.
+function delayedMessage(message, delay) {
+    let promise = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(message);
+        }, delay);
+    });
+    return promise;
+}
+delayedMessage("This is delayed", 3000).then((item) => console.log(item));
