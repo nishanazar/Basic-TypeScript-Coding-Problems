@@ -194,7 +194,7 @@ function fetchData() {
     });
     return promise;
 }
-fetchData().then((vale) => console.log(vale));
+// fetchData().then((vale) => console.log(vale));
 //-----------------Question: 18-------------------------------
 // Write a function called delayedMessage that takes a message (string) and a delay time (number)
 // in milliseconds as parameters. The function should return a promise that resolves after the
@@ -210,4 +210,26 @@ function delayedMessage(message, delay) {
     });
     return promise;
 }
-delayedMessage("This is delayed", 3000).then((item) => console.log(item));
+// delayedMessage("This is delayed", 3000).then((item) => console.log(item));
+//-----------------Question: 19-------------------------------
+// Function with Rest Parameters: Write a function that takes a rest parameter representing
+// multiple hobbies. It should log each hobby with a statement saying you enjoy that hobby.
+function multipleHobbies(...params) {
+    params.forEach((item) => {
+        console.log(`I enjoy ${item}.`);
+    });
+}
+// multipleHobbies("writing", "reading", "travelling", "coding");
+//-----------------Question: 20-------------------------------
+// Construct an object for a laptop including properties make, model, year, and a method describe() 
+// that logs a sentence about the laptop.
+let laptop = {
+    make: "Dell",
+    model: "New Elite Series",
+    year: 2023,
+    describe() {
+        console.log(`This laptop is a ${this.year} ${this.make} ${this.model} `);
+    },
+};
+laptop.describe();
+// console.log(laptop);
