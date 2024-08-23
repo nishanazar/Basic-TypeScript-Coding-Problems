@@ -291,15 +291,40 @@ let laptop = {
     console.log(`This laptop is a ${this.year} ${this.make} ${this.model} `);
   },
 };
-laptop.describe();
-console.log(laptop);
+// laptop.describe();
+// console.log(laptop);
 
 //-----------------Question: 21-------------------------------
 // Given an array of objects representing different laptops, each with properties `make`, `model`,
 // and `year`, use array destructuring to assign the first and second laptops to variables. Then,
 // log these variables.
 
+let arrrayOfObject = [
+  { make: "dell", model: "MacBook Air", year: 2022 },
+  { make: "Apple", model: "Dell Inspiron ", year: 2023 },
+  { make: "Lenovo", model: "ThinkPad T14s", year: 2024 },
+];
+
+let [laptop1, laptop2] = arrrayOfObject;
+
+// console.log(laptop1);
+// console.log(laptop2);
+
 //-----------------Question: 22-------------------------------
-// Combining Arrays with Spread Operator: Suppose you are comparing prices of two different sets
-//  of laptops. Use the spread operator to combine these arrays into a single array sorted in
-//  ascending order, then log the result.
+// Multiline Template Literals: Use template literals to create a multiline string that describes
+//  your ideal day. Include at least three different activities.
+
+let myIdealDay = `My ideal day would involve:
+1. Waking up early and going for a jog.
+2. Spending a few hours coding on a personal project.
+3. Ending the day by reading a good book.`;
+// console.log(myIdealDay);
+
+//-----------------Question: 22-------------------------------
+
+// Refactoring to Arrow Functions: Take a simple function that calculates the area of a rectangle
+//  and refactor it into an arrow function.
+
+let areaOfRectangle = (width: number, hight: number): number => width * hight;
+
+console.log(areaOfRectangle(35, 15));

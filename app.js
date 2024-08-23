@@ -221,7 +221,7 @@ function multipleHobbies(...params) {
 }
 // multipleHobbies("writing", "reading", "travelling", "coding");
 //-----------------Question: 20-------------------------------
-// Construct an object for a laptop including properties make, model, year, and a method describe() 
+// Construct an object for a laptop including properties make, model, year, and a method describe()
 // that logs a sentence about the laptop.
 let laptop = {
     make: "Dell",
@@ -231,5 +231,31 @@ let laptop = {
         console.log(`This laptop is a ${this.year} ${this.make} ${this.model} `);
     },
 };
-laptop.describe();
+// laptop.describe();
 // console.log(laptop);
+//-----------------Question: 21-------------------------------
+// Given an array of objects representing different laptops, each with properties `make`, `model`,
+// and `year`, use array destructuring to assign the first and second laptops to variables. Then,
+// log these variables.
+let arrrayOfObject = [
+    { make: "dell", model: "MacBook Air", year: 2022 },
+    { make: "Apple", model: "Dell Inspiron ", year: 2023 },
+    { make: "Lenovo", model: "ThinkPad T14s", year: 2024 },
+];
+let [laptop1, laptop2] = arrrayOfObject;
+// console.log(laptop1);
+// console.log(laptop2);
+//-----------------Question: 22-------------------------------
+// Multiline Template Literals: Use template literals to create a multiline string that describes
+//  your ideal day. Include at least three different activities.
+let myIdealDay = `My ideal day would involve:
+1. Waking up early and going for a jog.
+2. Spending a few hours coding on a personal project.
+3. Ending the day by reading a good book.`;
+// console.log(myIdealDay);
+;
+//-----------------Question: 22-------------------------------
+// Refactoring to Arrow Functions: Take a simple function that calculates the area of a rectangle
+//  and refactor it into an arrow function.
+let areaOfRectangle = (width, hight) => width * hight;
+console.log(areaOfRectangle(35, 15));
