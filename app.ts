@@ -320,11 +320,84 @@ let myIdealDay = `My ideal day would involve:
 3. Ending the day by reading a good book.`;
 // console.log(myIdealDay);
 
-//-----------------Question: 22-------------------------------
+//-----------------Question: 23-------------------------------
 
 // Refactoring to Arrow Functions: Take a simple function that calculates the area of a rectangle
 //  and refactor it into an arrow function.
 
 let areaOfRectangle = (width: number, hight: number): number => width * hight;
 
-console.log(areaOfRectangle(35, 15));
+// console.log(areaOfRectangle(35, 15));
+
+//-----------------Question: 24-------------------------------
+// Make a Smartphone Object: Create a simple way to keep track of a smartphones
+// details. Include its brand, model, and other key features like how much storage it has,
+//  the size of its screen, and how long its battery lasts.
+
+let Smartphone = {
+  brand: "readmi A3",
+  model: "samsung",
+  space: {
+    storage: "128GB",
+    screenSize: "6.5 inches",
+    batteryLife: "24 hours",
+  },
+};
+console.log(Smartphone.space.screenSize);
+
+//-----------------Question: 25-------------------------------
+// Pulling Apart a Nested Object: Imagine you have a list inside another list that shows what a
+// computer programmer knows, like coding languages, tools, and software frameworks. Find a way
+// to get three specific skills from this list and show them.
+
+let computer = {};
+
+const programmerSkills = {
+  languages: ["JavaScript", "TypeScript", "Python"],
+  tools: ["Git", "VS Code", "Docker"],
+  frameworks: ["React", "Angular", "Node.js"],
+};
+
+console.log(
+  `Languages = ${programmerSkills.languages}.\nTools = ${programmerSkills.tools}.\nFramework = ${programmerSkills.frameworks}.`
+);
+
+//-----------------Question: 26-------------------------------
+// Making Flexible Object Keys: Learn how to set up a list where you can change the name of each
+// section based on what you need at that moment, like adjusting labels based on user choices.
+
+let userChoice = "language";
+
+let settings = {
+  [userChoice]: "english",
+};
+
+// console.log(settings); // { preferredLanguage: "English" }
+
+userChoice = "theme";
+settings[userChoice] = "dark Mode";
+
+// console.log(settings); // { preferredLanguage: "English", theme: "Dark Mode" }
+
+//-----------------Question: 27-------------------------------
+// Double Numbers in an Array: Make a list of numbers. Then, use a trick to make a
+//  new list where each number is twice its original value.
+
+let num = [1, 2, 3, 4, 5];
+
+
+let doubledNumbers = num.map((number) => number * 2);
+console.log(doubledNumbers);
+
+//-----------------Question: 28-------------------------------
+
+// Keep Only Strings: Given a mix of different types of items, make a new list that
+// has only the words.
+let mixedArray: (number | string | boolean)[] = [1, 'apple', true, 'banana', 42, 'orange'];
+
+let result = mixedArray.filter((item)=> typeof item === "string")
+let result2 = mixedArray.filter((item)=> { return typeof item === "number"})
+console.log(result);
+
+console.log(result2);
+  
