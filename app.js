@@ -300,7 +300,7 @@ settings[userChoice] = "dark Mode";
 //  new list where each number is twice its original value.
 let num = [1, 2, 3, 4, 5];
 let doubledNumbers = num.map((number) => number * 2);
-console.log(doubledNumbers);
+// console.log(doubledNumbers);
 //-----------------Question: 28-------------------------------
 // Keep Only Strings: Given a mix of different types of items, make a new list that
 // has only the words.
@@ -308,4 +308,15 @@ let mixedArray = [1, 'apple', true, 'banana', 42, 'orange'];
 let result = mixedArray.filter((item) => typeof item === "string");
 let result2 = mixedArray.filter((item) => { return typeof item === "number"; });
 console.log(result);
-console.log(result2);
+// console.log(result2);
+//-----------------Question: 29-------------------------------
+// Find the Average grade: Given a list of grades, calculate the average grade.57
+function calculategrade(grade) {
+    let sum = 0;
+    for (let i = 0; i < grade.length; i++) {
+        sum = +grade[i];
+        let average = sum / grade.length;
+        return average;
+    }
+}
+console.log(calculategrade([60, 90, 40, 55, 60]));
