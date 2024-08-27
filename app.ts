@@ -405,7 +405,7 @@ let result = mixedArray.filter((item) => typeof item === "string");
 let result2 = mixedArray.filter((item) => {
   return typeof item === "number";
 });
-console.log(result);
+// console.log(result);
 
 // console.log(result2);
 
@@ -415,11 +415,26 @@ console.log(result);
 function calculategrade(grade: number[]) {
   let sum = 0;
   for (let i = 0; i < grade.length; i++) {
-    sum = +grade[i];
+    sum += grade[i];
 
     let average = sum / grade.length;
 
     return average;
   }
 }
-console.log(calculategrade([60, 90, 40, 55, 60]));
+// console.log(calculategrade([60, 90, 40, 55, 60]));
+
+//-----------------Question: 30-------------------------------
+// Write a simple program that can take lots of scores and find their average.
+
+function scores(...score: number[]) {
+  let totalScore = 0;
+  for (let i = 0; i < score.length; i++) {
+    totalScore += score[i];
+  }
+  let scoreAverage = totalScore / score.length;
+
+  return scoreAverage;
+}
+
+console.log(scores(40, 30, 33, 55, 60, 60, 70, 90, 45, 60));

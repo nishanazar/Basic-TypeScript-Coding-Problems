@@ -304,10 +304,19 @@ let doubledNumbers = num.map((number) => number * 2);
 //-----------------Question: 28-------------------------------
 // Keep Only Strings: Given a mix of different types of items, make a new list that
 // has only the words.
-let mixedArray = [1, 'apple', true, 'banana', 42, 'orange'];
+let mixedArray = [
+    1,
+    "apple",
+    true,
+    "banana",
+    42,
+    "orange",
+];
 let result = mixedArray.filter((item) => typeof item === "string");
-let result2 = mixedArray.filter((item) => { return typeof item === "number"; });
-console.log(result);
+let result2 = mixedArray.filter((item) => {
+    return typeof item === "number";
+});
+// console.log(result);
 // console.log(result2);
 //-----------------Question: 29-------------------------------
 // Find the Average grade: Given a list of grades, calculate the average grade.57
@@ -319,4 +328,15 @@ function calculategrade(grade) {
         return average;
     }
 }
-console.log(calculategrade([60, 90, 40, 55, 60]));
+// console.log(calculategrade([60, 90, 40, 55, 60]));
+//-----------------Question: 30-------------------------------
+// Write a simple program that can take lots of scores and find their average.
+function scores(...score) {
+    let totalScore = 0;
+    for (let i = 0; i < score.length; i++) {
+        totalScore += score[i];
+    }
+    let scoreAverage = totalScore / score.length;
+    return scoreAverage;
+}
+console.log(scores(40, 30, 33, 55, 60, 60, 70, 90, 45, 60));
